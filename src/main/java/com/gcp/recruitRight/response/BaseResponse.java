@@ -1,19 +1,22 @@
-package com.gcp.recruitRight.models;
+package com.gcp.recruitRight.response;
+
+import com.gcp.recruitRight.models.User;
 
 public class BaseResponse {
 	
 	private User user;
 	private Boolean booleanMsg;
 	private String exceptionMessage;
+	private String sessionId;
 	
 	public BaseResponse() {
 		
 	}
-	public BaseResponse(User user, Boolean booleanMsg, String exceptionMessage) {
-		super();
-		this.user = user;
-		this.booleanMsg = booleanMsg;
-		this.exceptionMessage = exceptionMessage;
+	public String getSessionId() {
+		return sessionId;
+	}
+	public void setSessionId(String sessionId) {
+		this.sessionId = sessionId;
 	}
 	public User getUser() {
 		return user;
@@ -33,7 +36,5 @@ public class BaseResponse {
 	public void setExceptionMessage(String exceptionMessage) {
 		this.exceptionMessage = exceptionMessage;
 	}
-	
-	
 	
 }

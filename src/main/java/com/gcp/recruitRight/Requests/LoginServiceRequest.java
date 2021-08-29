@@ -1,6 +1,6 @@
-package com.gcp.recruitRight.models;
+package com.gcp.recruitRight.Requests;
 
-public class User {
+public class LoginServiceRequest {
 	
 	private String userId;
 	private String userType;
@@ -8,6 +8,11 @@ public class User {
 	private String lastName;
 	private String contact;
 	private String password;
+	private String sessionId;
+	
+	public LoginServiceRequest() {
+		
+	}
 
 	public String getUserId() {
 		return userId;
@@ -56,6 +61,11 @@ public class User {
 	public void setPassword(String password) {
 		this.password = password;
 	}
-	
-	
+	public String getSessionId() {
+		return sessionId;
+	}
+
+	public void setSessionId(String sessionId) {
+		this.sessionId = sessionId;
+	}
 }
